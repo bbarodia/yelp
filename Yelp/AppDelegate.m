@@ -14,9 +14,11 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    MainViewController *mvc = [[MainViewController alloc] init];
     
-    self.window.rootViewController = [[MainViewController alloc] init];
-    
+    UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:mvc];
+    self.window.rootViewController = nvc;
+    nvc.title = @"Yelp";
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
