@@ -12,10 +12,10 @@
 #import "BusinessViewCell.h"
 #import "FilterViewController.h"
 
-NSString * const kYelpConsumerKey = @"vxKwwcR_NMQ7WaEiQBK_CA";
-NSString * const kYelpConsumerSecret = @"33QCvh5bIF5jIHR5klQr7RtBDhQ";
-NSString * const kYelpToken = @"uRcRswHFYa1VkDrGV6LAW2F8clGh5JHV";
-NSString * const kYelpTokenSecret = @"mqtKIxMIR4iBtBPZCmCLEb-Dz3Y";
+NSString * const kYelpConsumerKey = @"NipyvbIqssdag1-_VkYsaQ";
+NSString * const kYelpConsumerSecret = @"W_qyXaGgKG88cKLvUaCcWKCieOc";
+NSString * const kYelpToken = @"YMrb_7KumNoD_N7TZEKDHRXSnVRmir3Q";
+NSString * const kYelpTokenSecret = @"9xpEk3AcsHKu__peL-ecwcSmGm4";
 
 @interface MainViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *resultsView;

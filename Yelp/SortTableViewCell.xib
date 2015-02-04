@@ -14,14 +14,19 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="XWO-zG-CXk">
-                        <rect key="frame" x="17" y="8" width="123" height="29"/>
+                    <segmentedControl opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="XWO-zG-CXk">
+                        <rect key="frame" x="9" y="8" width="302" height="29"/>
                         <segments>
                             <segment title="First"/>
                             <segment title="Second"/>
                         </segments>
                     </segmentedControl>
                 </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="XWO-zG-CXk" secondAttribute="trailing" constant="9" id="AnX-nS-HSe"/>
+                    <constraint firstItem="XWO-zG-CXk" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="9" id="G2i-Jh-o7m"/>
+                    <constraint firstAttribute="centerY" secondItem="XWO-zG-CXk" secondAttribute="centerY" id="GWg-83-mLH"/>
+                </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="segmentedControl" destination="XWO-zG-CXk" id="nfE-fg-yDP"/>

@@ -33,14 +33,17 @@
 
 
 - (void)setSortByDictionary:(NSDictionary *)sortByDictionaryIn: (BOOL)on animated:(BOOL)animated  {
-    _sortByDictionary = sortByDictionaryIn;
+    _sortByDictionary = sortByDictionaryIn[@"name"];
     NSMutableArray *buttonNames = [NSMutableArray array];
     for (NSDictionary *sorts in _sortByDictionary ) {
+        NSString *name = sorts[@"name"];
+        NSLog(@"name:%@", name);
         [buttonNames addObject:sorts[@"name"]];
     }
     
     [self.segmentedControl addTarget:self action:@selector(segmentAction:)
                     forControlEvents:UIControlEventValueChanged];
+    [self.segmentedControl removeAllSegments];
     [self.segmentedControl  initWithItems:buttonNames];
 
 }
@@ -53,8 +56,9 @@
     }
     
     // Update the label with the segment number
-    NSString *segmentValue = buttonValues[segmentedControl.selectedSegmentIndex + 1];
+    NSString *segmentValue = buttonValues[segmentedControl.selectedSegmentIndex];
     NSLog(@"selected value %@", segmentValue);
+    [self.delegate sortTableViewCell:self didChangeSelection:segmentValue];
 }
 
 @end
